@@ -22,7 +22,7 @@ config_files=$(cat config)
 echo -e "Here is the configuration file:\n$config_files"
 ```
 
-![variables1](Images/variables1.gif)
+![variables](Images/variables.gif)
 
 ## Conditionals
 
