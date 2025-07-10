@@ -18,9 +18,11 @@ echo "Using file $file_name to configure..."
 To store command output:
 
 ```bash
-config_files=$(ls ./config.sh)
-echo "Here are all configuration files:” && $config_files
+config_files=$(cat config)
+echo -e "Here is the configuration file:\n$config_files"
 ```
+
+![variables1](Images/variables1.gif)
 
 ## Conditionals
 
