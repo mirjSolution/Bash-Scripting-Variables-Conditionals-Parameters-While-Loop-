@@ -6,21 +6,20 @@ In this README, you will learn about Bash scripting in Linux, including concepts
 
 Variables store data that can be reused. They are declared using:
 
-```bash
-file_name="config.yaml"
-```
-
 To reference a variable:
 
 ```bash
+file_name=config.sh
 echo "Using file $file_name to configure..."
 ```
+
+![variables](Images/variables.gif)
 
 To store command output:
 
 ```bash
-config_files=$(ls config)
-echo "Here are all configuration files: $config_files"
+config_files=$(ls ./config.sh)
+echo "Here are all configuration files:” && $config_files
 ```
 
 ## Conditionals
