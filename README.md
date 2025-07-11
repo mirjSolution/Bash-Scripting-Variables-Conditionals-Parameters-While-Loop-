@@ -118,3 +118,6 @@ done
 ## Summary
 
 This guide has covered key Bash scripting concepts useful in DevOps, including variable handling, input/output, conditionals, loops, and script execution.
+
+🧑‍💻 _Created by Rico John Dato-on_  
+🔗 [LinkedIn](https://www.linkedin.com/in/rico-john-dato-on) • [Portfolio](https://ricodatoon.netlify.app)
