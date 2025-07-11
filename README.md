@@ -82,9 +82,9 @@ Execute:
 
 ## Loops
 
-![forloop](Images/forloop.gif)
-
 ### For Loop
+
+![forloop](Images/forloop.gif)
 
 ```bash
 for param in "$@"
@@ -95,16 +95,23 @@ done
 
 ### While Loop
 
+![whileloop](Images/whileloop.gif)
+
 ```bash
 sum=0
 while true
 do
-  read -p "Enter score (or q to quit): " score
-  if [ "$score" = "q" ]; then
-    break
-  fi
-  sum=$((sum + score))
-  echo "Total: $sum"
+    read -p "Enter score (or q to quit): " score
+    if [ "$score" = "q" ]; then
+        break
+    fi
+    # Check if the input is a valid number before adding
+    if [[ "$score" =~ ^[0-9]+$ ]]; then
+        sum=$((sum + score))
+        echo "Total: $sum"
+    else
+        echo "Invalid input. Please enter a number or 'q'."
+    fi
 done
 ```
 
