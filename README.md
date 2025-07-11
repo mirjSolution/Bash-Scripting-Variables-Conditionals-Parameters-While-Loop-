@@ -82,7 +82,7 @@ Execute:
 
 ## Loops
 
-![forloop](Images/forloop.gif)
+![forloop](Images/forloop1.gif)
 
 ### For Loop
 
