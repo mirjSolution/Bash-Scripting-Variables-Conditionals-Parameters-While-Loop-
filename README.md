@@ -26,32 +26,38 @@ echo -e "Here is the configuration file:\n$config_files"
 
 ## Conditionals
 
+![comparisons](Images/comparison.gif)
+
 Check if a directory exists:
 
 ```bash
-if [ -d "$config_dir" ]; then
-  echo "Reading config directory contents"
+if [ -d test_dir ]; then
+        echo -e "Reading test_dir contents...\n"
+        ls test_dir | echo -e "Total files = $(wc -l)\n\nThis are the contents:\n$(ls test_dir)"
 else
-  echo "Config directory not found. Creating one."
-  mkdir $config_dir
+        echo "test_dir not found. creating one..."
+        mkdir test_dir
+        touch test_dir/testing_dir test_dir/test_file.txt
 fi
 ```
 
 Check number comparisons:
 
 ```bash
-if [ "$number_of_files" -lt 10 ]; then
-  echo "Less than 10 files"
+file_count=$(ls test_dir | wc -l)
+
+if [ "$file_count" -lt 10 ]; then
+        echo -e "\n'test_dir' folder is less than 10 files\n\nTotal files inside the test_dir = $file_count\n"
 fi
 ```
 
 String comparisons:
 
 ```bash
-if [ "$user_group" = "admin" ]; then
-  echo "Administering server"
-else
-  echo "No permission"
+user_group=$(groups rico-john-dato-on | grep -o '\bdevops\b')
+
+if [ "$user_group" = "devops" ]; then
+        echo -e "\n$(whoami) belongs to $user_group\n"
 fi
 ```
 
