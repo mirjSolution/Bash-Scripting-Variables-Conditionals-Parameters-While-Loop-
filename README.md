@@ -82,6 +82,8 @@ Execute:
 
 ## Loops
 
+![forloop](Images/forloop.gif)
+
 ### For Loop
 
 ```bash
