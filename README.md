@@ -56,25 +56,28 @@ String comparisons:
 ```bash
 user_group=$(groups rico-john-dato-on | grep -o '\bdevops\b')
 
-if [ "$user_group" = "devops" ]; then
+if [ "$user_group" == "devops" ]; then
         echo -e "\n$(whoami) belongs to $user_group\n"
 fi
 ```
 
 ## Parameters
 
+![parameters](Images/parameters.gif)
+
 Accept parameters in the script:
 
 ```bash
-#!/bin/bash
-config_dir=$1
+directory=$1
 user_group=$2
+
+echo "The directory will be using is: '$directory' and belongs to the group of: '$user_group'"
 ```
 
 Execute:
 
 ```bash
-./script.sh config admin
+./test1.sh test_dir devops
 ```
 
 ## Loops
